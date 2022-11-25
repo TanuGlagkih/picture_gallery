@@ -1,22 +1,16 @@
 import React from 'react';
+import Menu from '../menu/Menu';
+import styles from './header.module.css'
 
 export default function Header() {
 
     return (
-        <header>
-            <section>
-                <div>
-                    <img src={require('../../assets/icons/logo.svg').default} />
-                    <p>Каталог</p>
-                    <p>Доставка</p>
-                    <p>Оплата</p>
-                    <p>Контакты</p>
-                    <p>О галерее</p>
-                </div>
-            </section>
-            <section>
-
-            </section>
+        <header className={styles.header}>
+            <Menu />
+            <div className={styles.search}>
+                <input className={styles.input} placeholder='Поиск по названию картины'></input>
+                <button className={styles.button}>Найти</button>
+            </div>
         </header>
     )
 }

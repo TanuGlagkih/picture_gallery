@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export type TPicture = {
     img: string,
@@ -9,17 +9,21 @@ export type TPicture = {
     discount: number | null,
 
     isSold: boolean,
-    isAddedToCart: boolean
+    isAddedToCart: boolean | string,
 };
 
 export type TInitState = {
     pictures: Array<TPicture>,
-    cart: number
+    cart: number,
+    status: string | null,
+    id: string | null,
 };
 
 const initialState: TInitState = {
     pictures: [],
-    cart: null
+    cart: null,
+    status: null,
+    id: null
 };
 
 const mainStore = createSlice({
@@ -30,17 +34,24 @@ const mainStore = createSlice({
             state.pictures = action.payload;
         },
         addItemToCart(state, action) {
-            state.cart++
+            state.cart++;
+            state.pictures = state.pictures.map(item => item.id == action.payload.id
+                ?
+                item = action.payload
+                :
+                item
+            );
         },
         deleteItem(state, action) {
-            // state.pictures = state.pictures.map(item => (item.id == action.payload.id)
-            //     ?
-            //     item.isAddedToCart = false
-            //     :
-            //     item
-            //  );
+            state.cart--;
+            state.pictures = state.pictures.map(item => item.id == action.payload.id
+                ?
+                item = action.payload
+                :
+                item
+            );
         },
-    }
+    },
 })
 
 export default mainStore.reducer;

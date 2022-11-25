@@ -1,0 +1,98 @@
+.button {
+    height: 48px;
+    width: 118px;
+    background-color: #382E2B;
+    color: #F4F6F9;
+    border: 0;
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.button:hover,
+.buttonInCart:hover {
+    background-color: #776763;
+    cursor: pointer;
+}
+
+.button:disabled {
+    background-color: #C1B4B1;
+}
+
+.buttonInCart {
+    height: 48px;
+    width: 118px;
+    background-color: #5B3A32;
+    color: #F4F6F9;
+    border: 0;
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.price {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.prevPrice {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    color: #A0A0A0;
+    text-decoration: line-through;
+}
+
+.priceBlock {
+    margin: 0;
+}
+
+.priceBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 22px;
+}
+
+.soldInfo {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.picture {
+    margin-bottom: 8px;
+}
+
+.caption {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    padding-top: 12px;
+}
+
+.card {
+    width: 280px;
+    height: 328px;
+    border: 1px solid #E7E7E7;
+    margin: 0 5% 5% 0;
+}
+
+.sold {
+    width: 280px;
+    height: 328px;
+    border: 1px solid #E7E7E7;
+    opacity: 0.5;
+    margin: 0 5% 5% 0;
+}

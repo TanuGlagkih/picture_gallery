@@ -1,0 +1,37 @@
+.footer {
+
+    padding-left: 18%;
+    padding-right: 18%;
+    height: 96px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ECEAEA;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.img {
+    margin-right: 5%;
+}
+
+.text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    white-space: nowrap
+}

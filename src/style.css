@@ -1,17 +1,19 @@
 @font-face {
-    font-family: 'Merriweather-Regular';
+    font-family: 'Merriweather';
     font-style: normal;
     font-weight: normal;
-    src: local('Montserrat-Regular'),
+    src: local('Merriweather-Regular'),
         url('/src/assets/fonts/Merriweather-Regular.woff2') format('woff2'),
         url('/src/assets/fonts/Merriweather-Regular.woff') format('woff'),
         url('/src/assets/fonts/Merriweather-Regular.ttf') format('ttf'),
         url('/src/assets/fonts/Merriweather-Regular.eot') format('eot');
 }
 
-html,
 body {
+    margin: 0;
+
     background-color: #F6F3F3;
-    font-family: 'Merriweather-Regular';
+    font-family: 'Merriweather';
     font-style: normal;
+    color: #343030;
 }

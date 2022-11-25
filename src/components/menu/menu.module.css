@@ -1,0 +1,18 @@
+.box {
+    display: flex;
+    flex-direction: row;
+    width: 55%;
+    justify-content: space-between;
+}
+
+.text {
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.text:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

@@ -4,30 +4,30 @@ export const pictures = [
         title: 'Рождение Венеры',
         author: 'Сандро Боттичелли',
         id: '123',
-        price: 1000000000,
-        discount: 2000000000,
+        price: 1000000,
+        discount: 2000000,
         isSold: false,
-        isAddedToCart: false
+        isAddedToCart: false,
     },
     {
         img: 'Image2.png',
         title: 'Тайная вечеря',
         author: 'Леонардо да Винчи',
         id: '456',
-        price: 3000000000,
+        price: 3000000,
         discount: null,
         isSold: false,
-        isAddedToCart: false
+        isAddedToCart: false,
     },
     {
         img: 'Image3.png',
         title: 'Сотворение Адама',
         author: 'Микеланджело',
         id: '789',
-        price: 5000000000,
-        discount: 6000000000,
+        price: 5000000,
+        discount: 6000000,
         isSold: false,
-        isAddedToCart: false
+        isAddedToCart: false,
     },
     {
         img: 'Image4.png',
@@ -37,6 +37,6 @@ export const pictures = [
         price: 0,
         discount: null,
         isSold: true,
-        isAddedToCart: false
+        isAddedToCart: false,
     }
 ]
