@@ -31,7 +31,6 @@ export default function Picture(props: { picture: TPicture }) {
                     dispatch(addItemToCart(clone))
                 }, 2000);
             })
-
     }
 
     const deleteFromCart = (item: TPicture) => {
