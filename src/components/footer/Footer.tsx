@@ -6,7 +6,7 @@ export default function Footer() {
 
     return (
         <footer className={styles.footer}>
-            <Menu />
+            <Menu dark={true} />
             <section className={styles.contacts}>
                 <div className={styles.info}>
                     <img

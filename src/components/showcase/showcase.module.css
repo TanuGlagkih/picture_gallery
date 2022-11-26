@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .title {
@@ -14,6 +13,6 @@
 }
 
 .main {
-    margin-left: 18%;
-    margin-right: 18%;
+    margin-left: 15%;
+    margin-right: 15%;
 }

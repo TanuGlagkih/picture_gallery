@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 export type TPicture = {
     img: string,
@@ -14,16 +14,16 @@ export type TPicture = {
 
 export type TInitState = {
     pictures: Array<TPicture>,
-    cart: number,
+    inputData: string | undefined,
     status: string | null,
-    id: string | null,
+    cart: Array<TPicture>,
 };
 
 const initialState: TInitState = {
     pictures: [],
-    cart: null,
+    inputData: null,
     status: null,
-    id: null
+    cart: []
 };
 
 const mainStore = createSlice({
@@ -34,16 +34,23 @@ const mainStore = createSlice({
             state.pictures = action.payload;
         },
         addItemToCart(state, action) {
-            state.cart++;
-            state.pictures = state.pictures.map(item => item.id == action.payload.id
-                ?
-                item = action.payload
-                :
-                item
+            if (action.payload.isAddedToCart === true) {
+
+                state.cart.push(action.payload)
+                sessionStorage.setItem('cart', JSON.stringify(state.cart));
+            }
+
+            state.pictures = state.pictures.map(
+                item => item.id == action.payload.id
+                    ?
+                    item = action.payload
+                    :
+                    item
             );
         },
         deleteItem(state, action) {
-            state.cart--;
+            state.cart = state.cart.filter(item => item.id != action.payload.id);
+            sessionStorage.setItem('cart', JSON.stringify(state.cart));
             state.pictures = state.pictures.map(item => item.id == action.payload.id
                 ?
                 item = action.payload
@@ -51,8 +58,25 @@ const mainStore = createSlice({
                 item
             );
         },
+        fillCart(state, action) {
+            state.cart = action.payload.length;
+            state.cart = action.payload;
+
+            for (let i = 0; i < state.cart.length; i++) {
+                state.pictures = state.pictures.map(
+                    item => item.id == state.cart[i].id
+                        ?
+                        item = state.cart[i]
+                        :
+                        item
+                );
+            }
+        },
+        findPicture(state, action) {
+            state.inputData = action.payload
+        }
     },
 })
 
 export default mainStore.reducer;
-export const { fillShowcase, addItemToCart, deleteItem } = mainStore.actions;
+export const { fillShowcase, addItemToCart, deleteItem, fillCart, findPicture } = mainStore.actions;

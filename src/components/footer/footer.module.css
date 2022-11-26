@@ -1,7 +1,6 @@
 .footer {
-
-    padding-left: 18%;
-    padding-right: 18%;
+    padding-left: 15%;
+    padding-right: 15%;
     height: 96px;
     display: flex;
     flex-direction: row;
@@ -13,7 +12,7 @@
 .contacts {
     display: flex;
     flex-direction: row;
-    width: fit-content;
+    flex-basis: 500px;
 }
 
 .info {
@@ -21,7 +20,6 @@
     flex-direction: row;
     margin-left: 10%;
     flex-wrap: nowrap;
-    justify-content: space-between;
 }
 
 .img {
