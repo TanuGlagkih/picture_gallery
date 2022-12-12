@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { addItemToCart, deleteItem, TPicture } from '../../services/main-store';
 import styles from './picture.module.css';
 
-export default function Picture(props: { picture: TPicture }) {
+export function Picture(props: { picture: TPicture }) {
     const picture = props.picture;
     const dispatch = useDispatch();
     const image = require(`../../assets/data/pictures/${picture.img}`).default;

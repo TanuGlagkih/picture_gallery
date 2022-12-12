@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { TRootState } from '../../services/config-store';
-import Picture from '../picture/Picture';
+import { Picture } from '../picture/Picture';
 import styles from './showcase.module.css'
 
 export default function Showcase() {
